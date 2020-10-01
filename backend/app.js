@@ -8,6 +8,7 @@ const db = require('./data/mongoose');
 
 const supportRouter = require('./routes/support');
 const usersRouter = require('./routes/users');
+const v1Router = require('./routes/api/v1');
 
 const app = express();
 
@@ -26,6 +27,7 @@ db.connect()
     app.use(express.static(path.join(__dirname, 'public')));
 
     app.use('/users', usersRouter);
+    app.use('/v1', v1Router);
 
     // catch 404 and forward to error handler
     app.use(function(req, res, next) {

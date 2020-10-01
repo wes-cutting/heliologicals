@@ -28,6 +28,7 @@ module.exports = function (collection) {
     });
 
     router.get('/', async function(req, res, next) {
+        console.log(collection);
         try{
             const data = await collection.findAll();
             res.json(data);

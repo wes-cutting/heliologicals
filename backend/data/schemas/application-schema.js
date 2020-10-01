@@ -34,7 +34,7 @@ const ApplicationSchema = new Schema({
     company: String, 
     description: String, 
     links: [LinkSchema],
-    comments = [CommentSchema],
+    comments : [CommentSchema],
     stage: {
         type: String, 
         enum: [
